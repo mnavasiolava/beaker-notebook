@@ -33,7 +33,7 @@
         type: "@",
         model: "=" // assume ref to model doesn't change after directive is created
       },
-      require: ['bkOutputDisplay', '^bkCodeCellOutput'],
+      require: ['bkOutputDisplay'],
       controllerAs: 'outputDisplayCtrl',
       controller: function ($scope) {
         this.notifyWhenDone = false;
@@ -91,10 +91,10 @@
         }
         
         function showNotification() {
-          ctrl.notifyWhenDone = false;
-          bkNotificationService.showNotification('Evaluation completed',
-            codeCellOutputCtrl.getOutputSummary() || 'no output',
-            'beakerCellEvaluationDone');
+          //ctrl.notifyWhenDone = false;
+          //bkNotificationService.showNotification('Evaluation completed',
+          //  codeCellOutputCtrl.getOutputSummary() || 'no output',
+          //  'beakerCellEvaluationDone');
         }
       }
     };
