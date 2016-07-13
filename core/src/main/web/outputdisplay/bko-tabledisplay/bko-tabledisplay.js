@@ -2692,7 +2692,9 @@
               state.headersVertical = scope.headersVertical;
             }
 
-            scope.model.setDumpState({datatablestate: state});
+            if (scope.model.setDumpState !== undefined) {
+              scope.model.setDumpState({datatablestate: state});
+            }
           }
         });
 
